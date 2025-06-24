@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="windows_xp_bliss.png" alt="Windows XP Bliss Banner" />
+</p>
+
 ## Hi there 👋
 
 <!--
