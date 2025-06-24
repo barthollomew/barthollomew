@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="windows_xp_bliss.png" alt="Windows XP Bliss Banner" />
+  <img
+    src="windows_xp_bliss.png"
+    alt="Windows XP Bliss Banner"
+    style="width:80%; max-width:800px; height:auto;"
+  />
 </p>
 
 ## Hi there 👋
