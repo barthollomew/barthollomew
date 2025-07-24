@@ -2,7 +2,7 @@
   <img
     src="windows_xp_bliss.png"
     alt="Windows XP Bliss Banner"
-    style="width:80%; max-width:800px; height:auto;"
+    style="width:80%; max-width:600px; height:auto;"
   />
 </p>
 
