@@ -1,19 +1,29 @@
 # Nathan
 
-Backend and distributed systems engineer working with Java 21, Go, and Neovim tooling.
+Backend engineer building in Java and Go. I like fast systems, simple tools, and keeping production servers alive.
 
-I focus on low-latency concurrency, production JVM diagnostics, resilient service gateways, and fast developer tools.
+## Projects
 
-## Featured Projects
+- **[WATTOM](https://github.com/barthollomew/WATTOM)**: Attach to a frozen Java app by PID and see why it is stuck (CPU, memory allocation rate, deadlocks, pinned Java 21 virtual threads, and live method latency) without restarting it.
+- **[NOPE](https://github.com/barthollomew/NOPE)**: Drop background requests first during traffic spikes so login and checkout stay fast. Uses CoDel queue wait times and three priority tiers in Java 21.
+- **[SLOPWALL](https://github.com/barthollomew/SLOPWALL)**: Put per-user token limits, automatic provider failover, and a local SQLite cache in front of OpenAI and Anthropic calls in Java 21.
+- **[HL2DEM](https://github.com/barthollomew/HL2DEM)**: Turn Counter-Strike 2 match replay files (`.dem`) into tick-by-tick player JSON or CSV using Java 21 `MemorySegment` zero-copy reads and Snappy frame unpacking.
+- **[check-this.nvim](https://github.com/barthollomew/check-this.nvim)**: Neovim plugin and Go Tree-sitter analyzer that flags missing network timeouts, infinite retries, and swallowed errors while you edit.
+- **[why-is-this-slow](https://github.com/barthollomew/why-is-this-slow)**: Run any slow terminal command and see whether it is waiting on disk/network or burning CPU, then compare runs over time.
 
-- **[WATTOM](https://github.com/barthollomew/WATTOM)**: Hot-attach Java 21 diagnostic agent that streams JFR events, detects virtual thread pinning and carrier starvation, tracks TLAB allocation rates, and instruments method p99 latency in live JVMs without a restart.
-- **[NOPE](https://github.com/barthollomew/NOPE)**: Adaptive Java 21 load-shedding library that combines RFC 8289 CoDel sojourn tracking, Little's Law concurrency limits, VarHandle semaphores, and three-tier priority queues with sub-microsecond hot-path latency.
-- **[SLOPWALL](https://github.com/barthollomew/SLOPWALL)**: Java 21 LLM gateway library featuring lock-free token bucket budgets, sliding-window circuit breakers, structured concurrency failover, and WAL-mode SQLite semantic caching.
-- **[HL2DEM](https://github.com/barthollomew/HL2DEM)**: Counter-Strike 2 Source 2 demo parser built on Java 21 `MemorySegment` zero-copy reads, Snappy frame unpacking, custom Huffman field-path decoding, and virtual-thread streaming export.
-- **[check-this.nvim](https://github.com/barthollomew/check-this.nvim)**: Neovim plugin and CGO Tree-sitter Go AST analyzer that flags production reliability risks (unbounded retries, missing network timeouts, swallowed errors, and mutable global state) inline as you type.
-- **[why-is-this-slow](https://github.com/barthollomew/why-is-this-slow)**: Go CLI that measures command wall time, `rusage` CPU time, and max RSS across repeat runs to classify workloads as I/O wait, CPU bound, or parallel CPU and compare runs for regressions.
+## Open Source Contributions
 
-## Core Focus
+### JVM Ecosystem
+- **[FasterXML/jackson-core#1834](https://github.com/FasterXML/jackson-core/pull/1834)**: Preserve textual flag in redacted `ContentReference`.
+- **[wiremock/wiremock#3695](https://github.com/wiremock/wiremock/pull/3695)**: Do not match present empty array against `absent()` in `matchingJsonPath`.
+- **[pmd/pmd#7382](https://github.com/pmd/pmd/pull/7382)**: Do not count calls on other objects as recursion in `CognitiveComplexity`.
+- **[hcoles/pitest#1513](https://github.com/hcoles/pitest/pull/1513)**: Support `fullMutationMatrix` XML fields in `pitest-aggregator`.
+- **[awaitility/awaitility#343](https://github.com/awaitility/awaitility/pull/343)**: Add poll delay getters to `StartEvaluationEvent`.
+- **[jk1/Gradle-License-Report#433](https://github.com/jk1/Gradle-License-Report/pull/433)**: Narrow BSD-3-Clause rules and map related licenses.
 
-- **JVM & Concurrency**: Java 21, Virtual Threads, Structured Concurrency, JDK Flight Recorder (JFR), ByteBuddy bytecode instrumentation, `MemorySegment` (FFM API), `VarHandle` lock-free primitives, and JMH microbenchmarking.
-- **Systems & Developer Tooling**: Go, Tree-sitter AST analysis, Unix process telemetry (`rusage`), Neovim Lua plugins, and SQLite embedded storage.
+### Neovim & Lua Ecosystem
+- **[neovim/nvim-lspconfig#4581](https://github.com/neovim/nvim-lspconfig/pull/4581)**: Set default diagnostic source for `termux_language_server`.
+- **[obsidian-nvim/obsidian.nvim#1032](https://github.com/obsidian-nvim/obsidian.nvim/pull/1032)**: Keep first line in visual line mode (merged).
+- **[lunarmodules/Penlight#539](https://github.com/lunarmodules/Penlight/pull/539)**: Document `types.is_type` subclass behavior (merged).
+- **[nvimtools/none-ls.nvim#354](https://github.com/nvimtools/none-ls.nvim/pull/354)**: Keep `codespell` diagnostics when `--count` is used.
+- **[hedyhli/outline.nvim#178](https://github.com/hedyhli/outline.nvim/pull/178)**: Refresh highlight defaults on colorscheme change.
